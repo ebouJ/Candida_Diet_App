@@ -20,7 +20,7 @@ export default class FoodListComponent extends React.Component<FoodListProps, Fo
   public render() {
     return (
       <Screen preset="fixed" unsafe={true}>
-          <Header headerText="Food List" style ={{ backgroundColor: 'red'}} />
+          <Header headerText="Food List"  />
          <SectionList
   renderItem={({item, index, section}) => <Text key={index}>{item}</Text>}
   renderSectionHeader={({section: {title}}) => (

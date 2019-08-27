@@ -6,6 +6,16 @@ import { Icon } from "../icon"
 import { Text } from "../text"
 import { spacing } from "../../theme"
 import { translate } from "../../i18n/"
+import LinearGradient from "react-native-linear-gradient";
+
+/*
+This is use to generate colors for the linear gradient
+*/
+const Rainbow = require('rainbowvis.js');
+const numberOfItems = 9;
+const rainbow = new Rainbow();
+rainbow.setNumberRange(1, numberOfItems);
+rainbow.setSpectrum('#334d50', '#cbcaa5');
 
 // static styles
 const ROOT: ViewStyle = {
@@ -25,6 +35,7 @@ const RIGHT: ViewStyle = { width: 32 }
  * Header that appears on many screens. Will hold navigation buttons and screen title.
  */
 export class Header extends React.Component<HeaderProps, {}> {
+
   render() {
     const {
       onLeftPress,
@@ -37,26 +48,33 @@ export class Header extends React.Component<HeaderProps, {}> {
     } = this.props
     const header = headerText || (headerTx && translate(headerTx)) || ""
 
+
+
     return (
-      <View style={{ ...ROOT, ...this.props.style }}>
-        {leftIcon ? (
-          <Button preset="link" onPress={onLeftPress}>
-            <Icon icon={leftIcon} />
-          </Button>
-        ) : (
-          <View style={LEFT} />
-        )}
-        <View style={TITLE_MIDDLE}>
-          <Text style={{...TITLE, ...titleStyle}} text={header} />
+      <LinearGradient
+        colors={[...Array(9).keys()].map((i) =>  '#' + rainbow.colourAt(i))}
+        start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
+      >
+        <View style={{ ...ROOT, ...this.props.style }}>
+          {leftIcon ? (
+            <Button preset="link" onPress={onLeftPress}>
+              <Icon icon={leftIcon} />
+            </Button>
+          ) : (
+              <View style={LEFT} />
+            )}
+          <View style={TITLE_MIDDLE}>
+            <Text style={{ ...TITLE, ...titleStyle }} text={header} />
+          </View>
+          {rightIcon ? (
+            <Button preset="link" onPress={onRightPress}>
+              <Icon icon={rightIcon} />
+            </Button>
+          ) : (
+              <View style={RIGHT} />
+            )}
         </View>
-        {rightIcon ? (
-          <Button preset="link" onPress={onRightPress}>
-            <Icon icon={rightIcon} />
-          </Button>
-        ) : (
-          <View style={RIGHT} />
-        )}
-      </View>
+      </LinearGradient>
     )
   }
 }
