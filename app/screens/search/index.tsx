@@ -1,7 +1,11 @@
 import * as React from 'react';
-import { View, StyleSheet, Text, SectionList } from 'react-native';
+import { StyleSheet, Text, SectionList } from 'react-native';
 import   { Header  } from '../../components/header'
 import { Screen } from '../../components/screen'
+
+import firebase from 'react-native-firebase';
+
+
 
 
 export interface FoodListProps {
@@ -18,6 +22,13 @@ export default class FoodListComponent extends React.Component<FoodListProps, Fo
   }
 
   public render() {
+    firebase.auth()
+    .signInAnonymously()
+    .then(credential => {
+      if (credential) {
+        console.log('default app user ->', credential.user.toJSON());
+      }
+    }).catch(err => console.log(err));
     return (
       <Screen preset="fixed" unsafe={true}>
           <Header headerText="Food List"  />
