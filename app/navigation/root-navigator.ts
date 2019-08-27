@@ -1,9 +1,9 @@
 import { createStackNavigator } from "react-navigation"
-import { ExampleNavigator } from "./example-navigator"
+import TabBarNavigation from "./tab-bar-navigation"
 
 export const RootNavigator = createStackNavigator(
   {
-    exampleStack: { screen: ExampleNavigator },
+    tab: { screen: TabBarNavigation },
   },
   {
     headerMode: "none",

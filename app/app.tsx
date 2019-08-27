@@ -49,7 +49,6 @@ export class App extends React.Component<{}, AppState> {
     // color set in native by rootView's background color.
     //
     // This step should be completely covered over by the splash screen though.
-    //
     // You're welcome to swap in your own component to render if your boot up
     // sequence is too slow though.
     if (!rootStore) {
