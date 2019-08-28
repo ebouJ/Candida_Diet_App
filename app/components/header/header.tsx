@@ -8,6 +8,8 @@ import { spacing } from "../../theme"
 import { translate } from "../../i18n/"
 import LinearGradient from "react-native-linear-gradient";
 
+import { ifIphoneX } from 'react-native-iphone-x-helper'
+
 /*
 This is use to generate colors for the linear gradient
 */
@@ -64,7 +66,7 @@ export class Header extends React.Component<HeaderProps, {}> {
               <View style={LEFT} />
             )}
           <View style={TITLE_MIDDLE}>
-            <Text style={{ ...TITLE, ...titleStyle }} text={header} />
+            <Text style={{ ...TITLE, ...titleStyle, paddingTop: ifIphoneX ? 10 : null }} text={header} />
           </View>
           {rightIcon ? (
             <Button preset="link" onPress={onRightPress}>
