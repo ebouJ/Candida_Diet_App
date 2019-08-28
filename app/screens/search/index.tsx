@@ -2,6 +2,12 @@ import * as React from 'react';
 import { View, StyleSheet, Text, SectionList } from 'react-native';
 import   { Header  } from '../../components/header'
 import { Screen } from '../../components/screen'
+import firebase from 'react-native-firebase';
+
+firebase.auth().signInAnonymously()
+  .then((user) => {
+    console.log(user);
+  });
 
 
 export interface FoodListProps {
