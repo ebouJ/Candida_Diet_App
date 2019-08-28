@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "136111029528",
+    "firebase_url": "https://candida-64402.firebaseio.com",
+    "project_id": "candida-64402",
+    "storage_bucket": "candida-64402.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136111029528:android:eddd1629d4493fdf",
+        "android_client_info": {
+          "package_name": "com.canndida_diet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136111029528-9lpg3rtugafhi00j2auouoo7r0nf6rpb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_w8PZCfakgND-VSX2dI9KlhAmAiKMWdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136111029528-9lpg3rtugafhi00j2auouoo7r0nf6rpb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "136111029528-eifgi87uc0llu5r3hlopjmdh630gt3qp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.Canndida"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
