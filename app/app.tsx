@@ -13,6 +13,8 @@ import { BackButtonHandler } from "./navigation/back-button-handler"
 import { contains } from "ramda"
 import { DEFAULT_NAVIGATION_CONFIG } from "./navigation/navigation-config"
 
+console.disableYellowBox = true;
+
 interface AppState {
   rootStore?: RootStore
 }

@@ -85,11 +85,11 @@ const Tabs = createBottomTabNavigator(
     tabBarOptions: {
       //@ts-ignore
         tabFeatured: 'Diary',
-        backgroundFeaturedIcon: '#D7465A',
+        backgroundFeaturedIcon: '#334d50',
         activeFeaturedTintColor: 'skyblue',
         inactiveFeatureTintColor: 'white',
         showLabel: true,
-        activeTintColor: '#D7465A',
+        activeTintColor: '#334d50',
         inactiveTintColor: '#E1E3DB',
         style: {
             height: 80,

@@ -26,7 +26,7 @@ const TabBar = (props) => {
         <View style={{
             flexDirection: 'row',
             width: '100%',
-           // ...style
+            ...style
         }}>
             {
                 routes.map((route, idx) => (
