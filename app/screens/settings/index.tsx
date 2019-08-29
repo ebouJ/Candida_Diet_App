@@ -1,5 +1,8 @@
 import * as React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
+import { Header } from '../../components/header'
+import { Screen } from '../../components/screen'
+
 
 export interface SettingsProps {
 }
@@ -16,9 +19,9 @@ export default class SettingsComponent extends React.Component<SettingsProps, Se
 
   public render() {
     return (
-      <View>
-         <Text>Settings Component</Text>
-      </View>
+      <Screen preset="fixed" unsafe={true}>
+        <Header headerText="Home" />
+      </Screen>
     );
   }
 }

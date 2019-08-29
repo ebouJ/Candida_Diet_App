@@ -88,6 +88,7 @@ const Tabs = createBottomTabNavigator(
         backgroundFeaturedIcon: '#334d50',
         activeFeaturedTintColor: 'skyblue',
         inactiveFeatureTintColor: 'white',
+        keyboardHidesTabBar: true,
         showLabel: true,
         activeTintColor: '#334d50',
         inactiveTintColor: '#E1E3DB',

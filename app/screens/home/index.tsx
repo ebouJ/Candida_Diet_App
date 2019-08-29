@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { Header } from '../../components/header'
+import { Screen } from '../../components/screen'
+
 
 export interface AppProps {
 }
@@ -16,9 +18,10 @@ export default class Home extends React.Component<AppProps, AppState> {
 
   public render() {
     return (
-      <View>
-         <Text>Home Component</Text>
-      </View>
+      <Screen preset="fixed" unsafe={true}>
+        <Header headerText="Home" />
+        
+      </Screen>
     );
   }
 }

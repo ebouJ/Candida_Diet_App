@@ -16,6 +16,12 @@ export interface HeaderProps {
    * Icon that should appear on the left
    */
   leftIcon?: IconTypes
+
+
+  fontAwesomeIconName?: string,
+
+
+  IonicIconName?: string,
   
   /**
    * What happens when you press the left icon

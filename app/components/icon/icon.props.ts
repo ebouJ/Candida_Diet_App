@@ -7,6 +7,10 @@ export interface IconProps {
    */
   style?: ImageStyle
 
+  fontAwesomeIconName?: string,
+
+
+  IonicIconName?: string,
   /**
    * Style overrides for the icon container
    */  

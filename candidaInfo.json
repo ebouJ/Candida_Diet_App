@@ -1,0 +1,122 @@
+{
+    "diary": {
+        "name": "Diary",
+        "allowed": [
+            {
+                "name" : "Yogurt",
+                "descrption" : "Yogurts contains good bacterial that can be used to restore a good and healthly gut"
+            }, {
+                "name" : "Kefir",
+                "descrption" : "Kefir is a fermented  milk with the addition of kefir grains. They are so high in probiotics and can be use to replenished the gut with bad bacteria."
+            }, {
+                "name" : "Ghee",
+                "descrption" : "Ghee, is a class of clarified butter that originated in ancient India. It is commonly used in Middle Eastern cuisine, cuisine of the Indian subcontinent, Southeast Asian cuisine, traditional medicine, and religious rituals."
+            },
+             {
+                "name" : "Organic Butter",
+                "descrption" : "Ghee, is a class of clarified butter that originated in ancient India. It is commonly used in Middle Eastern cuisine, cuisine of the Indian subcontinent, Southeast Asian cuisine, traditional medicine, and religious rituals."
+            }
+        ],
+        "notAllowed": [
+            {
+                "name" : "Cheese",
+                "descrption" : ""
+            }, {
+                "name" : "Milk",
+                "descrption" : ""
+            }, {
+                "name" : "Cream",
+                "descrption" : ""
+            }, {
+                "name" : "Ice Cream",
+                "descrption" : ""
+            }
+        ]
+    },
+    "fruits": {
+        "name": "Fruits",
+        "allowed": [
+            {
+                "name" : "Lemon",
+                "descrption" : ""
+            }, {
+                "name" : "Limes",
+                "descrption" : ""
+            },  {
+                "name" : "Berries",
+                "descrption" : "Berries have some sugar content and they are allowed only in small amounts"
+            }
+        ],
+        "notAllowed": [
+            {
+                "name" : "Banana",
+                "descrption" : ""
+            }, {
+                "name" : "Dates",
+                "descrption" : ""
+            }, {
+                "name" : "Raisins",
+                "descrption" : ""
+            }, {
+                "name" : "Grapes",
+                "descrption" : ""
+            }, {
+                "name" : "Mango",
+                "descrption" : ""
+            }
+        ]
+
+    },
+    "meat": {
+        "name": "Meat",
+        "allowed": [
+            {
+                "name" : "Beef",
+                "descrption" : ""
+            }, {
+                "name" : "Lamb",
+                "descrption" : ""
+            }, {
+                "name" : "Chicken",
+                "descrption" : ""
+            }, {
+                "name" : "Turkey",
+                "descrption" : ""
+            }, {
+                "name" : "Mango",
+                "descrption" : ""
+            }
+        ],
+        "notAllowed": [
+            {
+                "name" : "Sausage",
+                "descrption" : ""
+            }, {
+                "name" : "Ham",
+                "descrption" : ""
+            }, {
+                "name" : "Bacon",
+                "descrption" : ""
+            }, {
+                "name" : "Pork",
+                "descrption" : ""
+            }, {
+                "name" : "Capicola",
+                "descrption" : ""
+            }
+        ]
+        
+    },
+    "vegetables": {
+        "name": "Vegatables",
+        "allowed": [],
+        "notAllowed": []
+
+    },
+    "grains_beans_legumes": {
+        "name": "Grains, Beans and Legumes",
+        "allowed": [],
+        "notAllowed": []
+
+    }
+}

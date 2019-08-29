@@ -1,14 +1,8 @@
 import * as React from 'react';
 import { View, StyleSheet, Text, SectionList } from 'react-native';
-import   { Header  } from '../../components/header'
+import { Header } from '../../components/header'
 import { Screen } from '../../components/screen'
-import firebase from 'react-native-firebase';
-
-firebase.auth().signInAnonymously()
-  .then((user) => {
-    console.log(user);
-  });
-
+import { ifIphoneX } from 'react-native-iphone-x-helper'
 
 export interface FoodListProps {
 }
@@ -25,20 +19,20 @@ export default class FoodListComponent extends React.Component<FoodListProps, Fo
 
   public render() {
     return (
-      <Screen preset="fixed" unsafe={true}>
-          <Header headerText="Food List"  />
-         <SectionList
-  renderItem={({item, index, section}) => <Text key={index}>{item}</Text>}
-  renderSectionHeader={({section: {title}}) => (
-    <Text style={{fontWeight: 'bold'}}>{title}</Text>
-  )}
-  sections={[
-    {title: 'Title1', data: ['item1', 'item2']},
-    {title: 'Title2', data: ['item3', 'item4']},
-    {title: 'Title3', data: ['item5', 'item6']},
-  ]}
-  keyExtractor={(item, index) => item + index}
-/>
+      <Screen preset="fixed" >
+         <Header headerText={"Food List"}  /> 
+        <SectionList
+          renderItem={({ item, index, section }) => <Text key={index}>{item}</Text>}
+          renderSectionHeader={({ section: { title } }) => (
+            <Text style={{ fontWeight: 'bold' }}>{title}</Text>
+          )}
+          sections={[
+            { title: 'Title1', data: ['item1', 'item2'] },
+            { title: 'Title2', data: ['item3', 'item4'] },
+            { title: 'Title3', data: ['item5', 'item6'] },
+          ]}
+          keyExtractor={(item, index) => item + index}
+        />
       </Screen>
     );
   }

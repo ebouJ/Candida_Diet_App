@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
+import   { Header  } from '../../components/header'
+import { Screen } from '../../components/screen'
 
 export interface DiaryProps {
 }
@@ -16,9 +18,9 @@ export default class DiaryComponent extends React.Component<DiaryProps, DiarySta
 
   public render() {
     return (
-      <View>
-         <Text>Diary Component</Text>
-      </View>
+      <Screen preset="fixed" unsafe={true}>
+          <Header headerText="Diary"  />
+      </Screen>
     );
   }
 }
