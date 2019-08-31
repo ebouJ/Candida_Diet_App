@@ -18,7 +18,9 @@ export interface HeaderProps {
   leftIcon?: IconTypes
 
 
-  fontAwesomeIconName?: string,
+  searchable?: boolean,
+
+  onTextChange?(txt: string): void,
 
 
   IonicIconName?: string,

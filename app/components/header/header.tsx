@@ -16,21 +16,22 @@ rainbow.setSpectrum('#334d50', '#cbcaa5');
 
 // static styles
 const ROOT: ViewStyle = {
-  backgroundColor: 'none',
+  backgroundColor: 'transparent',
 }
 
 /**
  * Header that appears on many screens. Will hold navigation buttons and screen title.
  */
-export class Header extends React.Component<HeaderProps, {}> {
+export class Header extends React.PureComponent<HeaderProps, {}> {
 
   render() {
     const {
       headerText,
       headerTx,
+      searchable,
+      onTextChange
     } = this.props
     const header = headerText || (headerTx && translate(headerTx)) || ""
-
 
 
     return (
@@ -40,10 +41,12 @@ export class Header extends React.Component<HeaderProps, {}> {
       >
         <Toolbar
           centerElement={header}
-          searchable={{
+           searchable={ searchable && {
             autoFocus: true,
             placeholder: 'Search',
+            onChangeText: (txt) => onTextChange(txt)
           }}
+                    
           style={{ container: { ...ROOT } }}
         />
       </LinearGradient>

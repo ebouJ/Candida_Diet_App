@@ -7,7 +7,6 @@ import {
 } from 'react-native'
 
 const TabBar = (props) => {
-    console.log(props)
     const {
         navigation: {state: {index, routes}},
         getLabelText,
