@@ -13,6 +13,7 @@ import { BackButtonHandler } from "./navigation/back-button-handler"
 import { contains } from "ramda"
 import { DEFAULT_NAVIGATION_CONFIG } from "./navigation/navigation-config"
 
+
 console.disableYellowBox = true;
 
 interface AppState {
@@ -31,6 +32,7 @@ export class App extends React.Component<{}, AppState> {
     this.setState({
       rootStore: await setupRootStore(),
     })
+    
   }
 
   /**
@@ -60,7 +62,9 @@ export class App extends React.Component<{}, AppState> {
     // otherwise, we're ready to render the app
 
     // --- am: begin list of stores ---
-    const otherStores = {}
+    const otherStores = {
+      foodlistStore: rootStore.foodList
+    }
     // --- am: end list of stores ---
 
     return (
