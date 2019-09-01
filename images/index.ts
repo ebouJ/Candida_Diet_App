@@ -1,0 +1,30 @@
+export const GRAPES = require('./grapes.jpg'); 
+
+
+export const IMAGES = {
+    grapes: require('./grapes.jpg'),
+    cheese: require('./cheese.jpg'),
+    banana: require('./banana.jpg'),
+    limes: require('./limes.jpg'),
+    turkey: require('./turkey.jpg'),
+    beef: require('./beef.jpg'),
+    ham: require('./ham.jpg'),
+    berries: require('./berries.jpg'),
+    mango: require('./mango.jpg'),
+    lamb: require('./lamb.jpg'),
+    capicola: require('./capicola.jpg'),
+    "ice cream": require('./icecream.jpg'),
+    dates: require('./dates.jpg'),
+    milk: require('./milk.jpg'),
+    "organic butter": require('./butter.jpg'),
+    ghee: require('./ghee.jpg'),
+    cream: require('./cream.jpg'),
+    kefir: require('./kefir.jpg'),
+    sausage: require('./sausage.jpg'),
+    lemon: require('./lemon.jpg'),
+    raisins: require('./raisins.jpg'),
+    pork: require('./pork.jpg'),
+    chicken: require('./chicken.jpg'),
+    yogurt: require('./yogurt.jpg'),
+    bacon: require('./bacon.jpg'),
+}

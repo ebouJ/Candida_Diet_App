@@ -15,12 +15,15 @@ export interface HeaderProps {
   /**
    * Icon that should appear on the left
    */
-  leftIcon?: IconTypes
+  leftIcon?: any
 
 
   searchable?: boolean,
 
   onTextChange?(txt: string): void,
+
+
+  sortLabel?(lable: any): void,
 
 
   IonicIconName?: string,

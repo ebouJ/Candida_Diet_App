@@ -10,13 +10,13 @@ const ROOT: ImageStyle = {
 }
 
 export function Icon(props: IconProps) {
-  const { style: styleOverride, icon, containerStyle } = props
+  const { style: styleOverride, icon, containerStyle, color , size} = props
   const style: ImageStyle = { ...ROOT, ...styleOverride}
 
   if (props.fontAwesomeIconName) {
     return (
       <View style={containerStyle}>
-        <FontAwesome style={{ marginTop: 15}}  size={20} name={props.fontAwesomeIconName} color={"white"} />
+        <FontAwesome style={{ marginLeft: 10}}  size={size || 20} name={props.fontAwesomeIconName} color={color} />
       </View>
     )
   }

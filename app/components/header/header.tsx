@@ -4,7 +4,6 @@ import { HeaderProps } from "./header.props"
 import { translate } from "../../i18n/"
 import LinearGradient from "react-native-linear-gradient";
 import { Toolbar } from 'react-native-material-ui';
-import Menu, { MenuItem } from 'react-native-material-menu';
 
 /*
 This is use to generate colors for the linear gradient
@@ -25,30 +24,19 @@ const ROOT: ViewStyle = {
  */
 export class Header extends React.PureComponent<HeaderProps, {}> {
 
-    _menu = null;
-
-  setMenuRef = ref => {
-    this._menu = ref;
-  };
-
-  hideMenu = () => {
-    this._menu.hide();
-  };
-
-  showMenu = () => {
-    this._menu.show();
-  };
-
   render() {
     const {
       headerText,
       headerTx,
       searchable,
-      onTextChange
+      onTextChange,
+      leftIcon,
+      onLeftPress,
+      sortLabel
     } = this.props
     const header = headerText || (headerTx && translate(headerTx)) || ""
 
-    
+    const labels = ['All','Diary','Fruits','Meat']
 
     return (
       <LinearGradient
@@ -57,6 +45,8 @@ export class Header extends React.PureComponent<HeaderProps, {}> {
       >
         <Toolbar
           centerElement={header}
+          leftElement={leftIcon}
+          onLeftElementPress={onLeftPress}
            searchable={ searchable && {
             autoFocus: true,
             placeholder: 'Search',
@@ -65,10 +55,10 @@ export class Header extends React.PureComponent<HeaderProps, {}> {
           rightElement={ searchable && {
             menu: {
                 icon: "more-vert",
-                labels: ["item 1", "item 2"]
+                labels: labels
             }
         }}
-        onRightElementPress={ (label) => { console.log(label) }}
+        onRightElementPress={ ({ index }) => sortLabel(labels[index])}
                     
           style={{ container: { ...ROOT } }}
         />

@@ -11,6 +11,10 @@ export interface IconProps {
 
 
   IonicIconName?: string,
+
+  color: string,
+
+  size?: number,
   /**
    * Style overrides for the icon container
    */  

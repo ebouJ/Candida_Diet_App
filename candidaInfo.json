@@ -4,7 +4,9 @@
         "allowed": [
             {
                 "name" : "Yogurt",
-                "descrption" : "Yogurts contains good bacterial that can be used to restore a good and healthly gut"
+                "descrption" : "Yogurts contains good bacterial that can be used to restore a good and healthly gut",
+                "url" : ""
+
             }, {
                 "name" : "Kefir",
                 "descrption" : "Kefir is a fermented  milk with the addition of kefir grains. They are so high in probiotics and can be use to replenished the gut with bad bacteria."

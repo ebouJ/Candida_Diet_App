@@ -9,6 +9,7 @@ import {
 import Home from '../screens/home'
 import Recipes from '../screens/recipes'
 import Search from '../screens/search'
+import DeatilFoodItem from '../screens/search/detailView'
 import Settings from '../screens/settings'
 import Diary from '../screens/diary'
 
@@ -31,7 +32,8 @@ const RecipesStack = createStackNavigator({
   navigationOptions: { gesturesEnabled: false },
 })
 const SearchStack = createStackNavigator({
-  search: Search
+  search: Search,
+  detail: DeatilFoodItem
 },
 {
   headerMode: "none",
