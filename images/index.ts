@@ -1,6 +1,3 @@
-export const GRAPES = require('./grapes.jpg'); 
-
-
 export const IMAGES = {
     grapes: require('./grapes.jpg'),
     cheese: require('./cheese.jpg'),
@@ -27,4 +24,8 @@ export const IMAGES = {
     chicken: require('./chicken.jpg'),
     yogurt: require('./yogurt.jpg'),
     bacon: require('./bacon.jpg'),
+    breakfast: require('./breakfast.jpg'),
+    lunch: require('./lunch1.jpg'),
+    dinner: require('./dinner.jpg'),
+    snack: require('./snack.jpg')
 }

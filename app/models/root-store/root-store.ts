@@ -1,13 +1,17 @@
 import { Instance, SnapshotOut, types } from "mobx-state-tree"
 import { NavigationStoreModel } from "../../navigation/navigation-store"
 import { createFoodListModel } from '../firebase/food_list'
+import { createStorageModel } from '../storage'
+import { createRecipesModel } from '../firebase/recipes'
 
 /**
  * An RootStore model.
  */
 export const RootStoreModel = types.model("RootStore").props({
   navigationStore: types.optional(NavigationStoreModel, {}),
-  foodList: createFoodListModel()
+  foodList: createFoodListModel(),
+  storage: createStorageModel(),
+  recipes: createRecipesModel()
 })
 
 /**

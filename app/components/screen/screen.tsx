@@ -29,7 +29,6 @@ function ScreenWithoutScrolling(props: ScreenProps) {
   </View>)
 
   const SafeArea = (
-
     <React.Fragment>
       <LinearGradient
         colors={[...Array(9).keys()].map((i) => '#' + rainbow.colourAt(i))}
@@ -43,7 +42,6 @@ function ScreenWithoutScrolling(props: ScreenProps) {
         {props.children}
       </ScrollView>
     </React.Fragment>
-
   )
 
   return (

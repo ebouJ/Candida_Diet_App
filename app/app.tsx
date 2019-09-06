@@ -63,7 +63,9 @@ export class App extends React.Component<{}, AppState> {
 
     // --- am: begin list of stores ---
     const otherStores = {
-      foodlistStore: rootStore.foodList
+      foodlistStore: rootStore.foodList,
+      storageStore: rootStore.storage,
+      recipes: rootStore.recipes
     }
     // --- am: end list of stores ---
 
