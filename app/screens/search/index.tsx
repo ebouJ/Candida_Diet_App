@@ -37,7 +37,7 @@ export default class FoodListComponent extends React.PureComponent<FoodListProps
     this.state = {
       data : [],
       searchTerm: '',
-      labelFilter: ''
+      labelFilter: 'All'
 
     };
   }
@@ -60,7 +60,6 @@ export default class FoodListComponent extends React.PureComponent<FoodListProps
   }
 
   renderItem = ({ item }) => {
-  
       return (
         <TouchableWithoutFeedback onPress={() => this.navigate(item)}>
          <View style={[BaseFlatListItem]}>
@@ -78,9 +77,11 @@ export default class FoodListComponent extends React.PureComponent<FoodListProps
   filterByLabel = (labelFilter: any) => {
     const { foodlistStore : { list } } = this.props
     if(labelFilter === 'All') {
-      this.setState({ data:  list } )
+      this.setState({ data:  list })
     } else if(labelFilter !== ''){
       this.setState({ data:  list.filter(item => item.cat === labelFilter) } )
+    }else {
+      this.setState({ data:  list })
     }
   }
 

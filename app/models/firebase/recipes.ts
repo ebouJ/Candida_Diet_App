@@ -3,6 +3,7 @@ import { firestore } from 'react-native-firebase'
 
 
 export const RecipeItem = types.model({
+    id: types.identifier,
     name: types.string,
     prep_time: types.string,
     cook_time: types.string,
@@ -50,9 +51,11 @@ export const RecipeList = types.model().props({
                 applySnapshot(self.breakfast, recipes.get('breakfast'))
                 applySnapshot(self.lunch, recipes.get('lunch'))
                 applySnapshot(self.dinner, recipes.get('dinner'))
+     
             })
         }),
         setSelectedItem: (selected) => {
+            console.log(selected)
             self.selected = selected
         }
     }))

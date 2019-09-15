@@ -12,6 +12,8 @@ import Search from '../screens/search'
 import DeatilFoodItem from '../screens/search/detailView'
 import Settings from '../screens/settings'
 import Diary from '../screens/diary'
+import DetailRecipeView from '../screens/temp/recipesDetails'
+
 
 import TabBar from './tabBar';
 
@@ -25,7 +27,8 @@ const HomeStack = createStackNavigator({
   navigationOptions: { gesturesEnabled: false },
 })
 const RecipesStack = createStackNavigator({
-  recipes: Recipes
+  recipes: Recipes,
+  detailRecipe: DetailRecipeView
 },
 {
   headerMode: "none",

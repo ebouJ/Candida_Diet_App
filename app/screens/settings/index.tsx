@@ -38,6 +38,7 @@ export default class SettingsComponent extends React.Component<SettingsProps, Se
       //     res.forEach(item => {
       //       const ref = firestore().collection('recipes').doc()
       //       firestore().collection('recipes').doc(ref.id).set( {
+      //         id: ref.id,
       //         name: item.name,
       //         prep_time: item.prep_time,
       //         cook_time: item.cook_time,

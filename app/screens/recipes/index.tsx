@@ -6,14 +6,13 @@ import Card from '../../components/card'
 import { Recipes } from '../../utils/constants'
 import { inject, observer } from 'mobx-react';
 import { RecipeList } from '../../models/firebase/recipes'
+import { NavigationScreenProps } from 'react-navigation'
+//import Details from './recipesScreen'
 
-
+//console.log(Details)
 const { width } = Dimensions.get('window')
 
-
-
-
-export interface RecipesProps {
+export interface RecipesProps extends NavigationScreenProps<{}>  {
   recipes: RecipeList
 }
 
@@ -24,7 +23,7 @@ export interface RecipesState {
 
 @inject("navigationStore", "recipes")
 @observer
-export default class RecipesComponent extends React.Component<RecipesProps, RecipesState> {
+export default class RecipesComponent extends React.PureComponent<RecipesProps, RecipesState> {
   constructor(props: RecipesProps) {
     super(props);
     this.state = {
@@ -41,10 +40,16 @@ export default class RecipesComponent extends React.Component<RecipesProps, Reci
     )
   }
 
-  renderVerticalFlatList = ({ item }: any) => {
+  navigate = (item: typeof RecipeList.Type) => {
 
+    this.props.recipes.setSelectedItem(item)
+    //this.props.navigation.navigate('detailRecipe')
+  }
+
+
+  renderVerticalFlatList = ({ item }: any) => {
     return (
-      <TouchableWithoutFeedback onPress={() => this.props.recipes.setSelectedItem(item)}>
+      <TouchableWithoutFeedback onPress={ () => this.navigate(item)}>
         <View style={{ borderBottomColor: 'gray', borderBottomWidth: 0.5, height: 30, margin: 15 }}>
           <Text style={{ fontFamily: 'roboto', fontSize: 15, maxHeight: width - 10 }}>{item.name}</Text>
         </View>
@@ -54,6 +59,7 @@ export default class RecipesComponent extends React.Component<RecipesProps, Reci
 
   getFlatListData = (type: string) => {
     return this.props.recipes[type]
+
   }
 
   renderRecipes = (title: string) => {
@@ -64,8 +70,9 @@ export default class RecipesComponent extends React.Component<RecipesProps, Reci
     const { current } = this.state
 
     const data = this.getFlatListData(current)
-
-
+    
+  
+   
 
     return (
       <Screen preset="fixed" unsafe={true}>
@@ -86,9 +93,10 @@ export default class RecipesComponent extends React.Component<RecipesProps, Reci
         <View style={{ flex: 1 }}>
           <Text>{current.toUpperCase()}</Text>
           <FlatList
-            data={data}
-            renderItem={this.renderVerticalFlatList}
-            ItemSeparatorComponent={() => <View style={{ width: 5, backgroundColor: 'red' }} />}
+            data={data && data.slice()}
+            extraData={this.state}
+            renderItem={(item) => this.renderVerticalFlatList(item)}
+            ItemSeparatorComponent={() => <View style={{ width: 5 }} />}
           />
         </View>
       </Screen>

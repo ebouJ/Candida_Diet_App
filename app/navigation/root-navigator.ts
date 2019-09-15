@@ -3,7 +3,7 @@ import TabBarNavigation from "./tab-bar-navigation"
 
 export const RootNavigator = createStackNavigator(
   {
-    tab: { screen: TabBarNavigation },
+    tabar: { screen: TabBarNavigation },
   },
   {
     headerMode: "none",
