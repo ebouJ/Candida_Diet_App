@@ -25,7 +25,10 @@ export const RecipeList = types.model().props({
 })
     .actions(self => ({
         afterCreate() {
-            this.fetcRecipes()
+            try{
+                this.fetcRecipes()
+            }catch(e){ console.log(e)}
+           
         },
         fetcRecipes: flow(function* () {
             function groupBy(list, keyGetter) {

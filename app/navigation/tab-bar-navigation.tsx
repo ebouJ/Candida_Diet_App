@@ -12,7 +12,7 @@ import Search from '../screens/search'
 import DeatilFoodItem from '../screens/search/detailView'
 import Settings from '../screens/settings'
 import Diary from '../screens/diary'
-import DetailRecipeView from '../screens/temp/recipesDetails'
+import DetailRecipeView from '../screens/recipes/recipesScreen'
 
 
 import TabBar from './tabBar';
@@ -63,7 +63,7 @@ const Tabs = createBottomTabNavigator(
     Search: SearchStack,
     Diary: DiaryStack,
     Recipes: RecipesStack,
-    Settings: SettingsStack,
+    Profile: SettingsStack,
 
   },{
     defaultNavigationOptions: ({ navigation }) => ({
@@ -76,7 +76,7 @@ const Tabs = createBottomTabNavigator(
           iconName = `star`;
         } else if (routeName === 'Search') {
           iconName = `search`;
-        } else if (routeName === 'Settings') {
+        } else if (routeName === 'Profile') {
           iconName = `cog`;
         } else if (routeName === 'Diary') {
           iconName = `book`;

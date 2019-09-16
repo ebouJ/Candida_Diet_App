@@ -7,9 +7,7 @@ import { Recipes } from '../../utils/constants'
 import { inject, observer } from 'mobx-react';
 import { RecipeList } from '../../models/firebase/recipes'
 import { NavigationScreenProps } from 'react-navigation'
-//import Details from './recipesScreen'
 
-//console.log(Details)
 const { width } = Dimensions.get('window')
 
 export interface RecipesProps extends NavigationScreenProps<{}>  {
@@ -43,7 +41,7 @@ export default class RecipesComponent extends React.PureComponent<RecipesProps, 
   navigate = (item: typeof RecipeList.Type) => {
 
     this.props.recipes.setSelectedItem(item)
-    //this.props.navigation.navigate('detailRecipe')
+   this.props.navigation.navigate('detailRecipe')
   }
 
 
