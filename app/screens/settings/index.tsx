@@ -90,7 +90,6 @@ export default class SettingsComponent extends React.Component<SettingsProps, Se
           <View
             style={{
               flexDirection: "row",
-              //justifyContent: "space-between"
               flex: 1
             }}
           >
