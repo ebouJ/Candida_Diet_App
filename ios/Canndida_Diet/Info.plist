@@ -20,6 +20,8 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CodePushDeploymentKey</key>
+	<string>VLnZTnqJuoHI7u_Fwq0-yOlBt9V5tscYQ4tH3</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
