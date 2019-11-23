@@ -61,7 +61,7 @@ export default class SettingsComponent extends React.Component<SettingsProps, Se
 
     return (
       <View style={styles.container}>
-        <Header headerText={"More"} />
+        <Header headerText={"Moree"} />
         <ScrollView>
           <View style={styles.imageView} />
           <View style={styles.shadow} />
