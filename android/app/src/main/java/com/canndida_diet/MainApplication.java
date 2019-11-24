@@ -20,6 +20,7 @@ import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import io.invertase.firebase.auth.RNFirebaseAuthPackage;
 import io.invertase.firebase.firestore.RNFirebaseFirestorePackage;
+import com.microsoft.codepush.react.CodePush;
 
 import java.util.Arrays;
 import java.util.List;
@@ -38,6 +39,7 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new AppCenterReactNativeCrashesPackage(MainApplication.this, getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
             new AppCenterReactNativeAnalyticsPackage(MainApplication.this, getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics)),
+            new CodePush("Lr3LnnGGhbk4N26Xl7WoObI38nNzW2SmDJzVg", MainApplication.this, BuildConfig.DEBUG),
             new AppCenterReactNativePackage(MainApplication.this),
             new RNFirebasePackage(),
             new VectorIconsPackage(),
@@ -48,7 +50,7 @@ public class MainApplication extends Application implements ReactApplication {
             new KeychainPackage(),
             new AsyncStoragePackage(),
             new RNFirebaseAuthPackage(),
-              new RNFirebaseFirestorePackage()
+            new RNFirebaseFirestorePackage()
       );
     }
 
