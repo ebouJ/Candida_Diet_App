@@ -11,10 +11,6 @@ const { width, height } = Dimensions.get('window')
 
 
 
-
-
-
-
 export interface SettingsProps extends NavigationScreenProps<{}>  {
 }
 
@@ -71,6 +67,13 @@ export default class SettingsComponent extends React.Component<SettingsProps, Se
             secondIcon={"angle-right"}
             onPress={() => navigate("notification")}
           />
+          <MoreComponent
+            text={"ECSE 437 Live Demo"}
+            firstIcon={"md-notifications"}
+            secondIcon={"angle-right"}
+            onPress={() => navigate("notification")}
+          />
+         
           <View style={styles.shadowV} />
           <MoreComponent
             text={"Trigger List"}
