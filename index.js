@@ -8,4 +8,18 @@
 //
 // It's easier just to leave it here.
 
-import "./app/app.tsx"
+import App from './app/app'
+import { AppRegistry } from "react-native"
+import { StorybookUIRoot } from "./storybook"
+
+
+
+const APP_NAME = "Canndida_Diet"
+
+// Should we show storybook instead of our app?
+//
+// ⚠️ Leave this as `false` when checking into git.
+const SHOW_STORYBOOK = false
+
+const RootComponent = SHOW_STORYBOOK && __DEV__ ? StorybookUIRoot : App
+AppRegistry.registerComponent(APP_NAME, () => RootComponent)

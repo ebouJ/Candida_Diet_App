@@ -9,8 +9,8 @@ import Iconic from "react-native-vector-icons/FontAwesome";
 interface CompProps {
     onPress?(): void,
     bool?: boolean,
-    firstIcon: string,
-    secondIcon: string,
+    firstIcon?: string,
+    secondIcon?: string,
     text: string
 
 

@@ -4,9 +4,8 @@
 
 import "./i18n"
 import * as React from "react"
-import { AppRegistry } from "react-native"
 import { StatefulNavigator } from "./navigation"
-import { StorybookUIRoot } from "../storybook"
+import CodePush from 'react-native-code-push'
 import { RootStore, setupRootStore } from "./models/root-store"
 import { Provider } from "mobx-react"
 import { BackButtonHandler } from "./navigation/back-button-handler"
@@ -23,7 +22,7 @@ interface AppState {
 /**
  * This is the root component of our app.
  */
-export class App extends React.Component<{}, AppState> {
+ class App extends React.Component<{}, AppState> {
   /**
    * When the component is mounted. This happens asynchronously and simply
    * re-renders when we're good to go.
@@ -82,13 +81,11 @@ export class App extends React.Component<{}, AppState> {
 /**
  * This needs to match what's found in your app_delegate.m and MainActivity.java.
  */
-const APP_NAME = "Canndida_Diet"
 
-// Should we show storybook instead of our app?
-//
-// ⚠️ Leave this as `false` when checking into git.
-const SHOW_STORYBOOK = false
+ const codePushConfig = {
+   checkFrequency: CodePush.CheckFrequency.ON_APP_START
+ }
 
-const RootComponent = SHOW_STORYBOOK && __DEV__ ? StorybookUIRoot : App
-AppRegistry.registerComponent(APP_NAME, () => RootComponent)
+
+ export default CodePush(codePushConfig)(App)
 

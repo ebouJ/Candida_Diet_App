@@ -1,4 +1,11 @@
 PODS:
+  - AppCenter/Analytics (2.5.1):
+    - AppCenter/Core
+  - AppCenter/Core (2.5.1)
+  - AppCenter/Crashes (2.5.1):
+    - AppCenter/Core
+  - AppCenterReactNativeShared (2.6.0):
+    - AppCenter/Core (= 2.5.1)
   - BoringSSL-GRPC (0.0.3):
     - BoringSSL-GRPC/Implementation (= 0.0.3)
     - BoringSSL-GRPC/Interface (= 0.0.3)
@@ -180,6 +187,9 @@ PODS:
   - Protobuf (3.9.0)
 
 DEPENDENCIES:
+  - AppCenter/Analytics (~> 2.5.1)
+  - AppCenter/Crashes (~> 2.5.1)
+  - AppCenterReactNativeShared (~> 2.6.0)
   - Crashlytics (~> 3.13.2)
   - Fabric (~> 1.10.2)
   - Firebase/Auth (~> 6.3.0)
@@ -195,6 +205,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AppCenter
+    - AppCenterReactNativeShared
     - BoringSSL-GRPC
     - Crashlytics
     - Fabric
@@ -225,6 +237,8 @@ SPEC REPOS:
     - Protobuf
 
 SPEC CHECKSUMS:
+  AppCenter: fddcbac6e4baae3d93a196ceb0bfe0e4ce407dec
+  AppCenterReactNativeShared: d5e360f8a4cb5126d29e31ab98051d2f070ba631
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
   Crashlytics: 2dfd686bcb918dc10ee0e76f7f853fe42c7bd552
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
@@ -254,6 +268,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
 
-PODFILE CHECKSUM: 451f57acf7c97024f0ad6dbfc0d61f2a95f03cb3
+PODFILE CHECKSUM: 92723c2accbe020053f59943343a36353cd04201
 
 COCOAPODS: 1.7.5

@@ -71,6 +71,7 @@ export default class SettingsComponent extends React.Component<SettingsProps, Se
             secondIcon={"angle-right"}
             onPress={() => navigate("notification")}
           />
+          
           <View style={styles.shadowV} />
           <MoreComponent
             text={"Trigger List"}

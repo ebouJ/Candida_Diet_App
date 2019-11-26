@@ -6,16 +6,23 @@
  */
 
 #import "AppDelegate.h"
+#import <AppCenterReactNativeCrashes/AppCenterReactNativeCrashes.h>
+#import <AppCenterReactNativeAnalytics/AppCenterReactNativeAnalytics.h>
+#import <AppCenterReactNative/AppCenterReactNative.h>
 
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <Firebase.h>
+#import <CodePush/CodePush.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [AppCenterReactNativeCrashes registerWithAutomaticProcessing];  // Initialize AppCenter crashes
+  [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];  // Initialize AppCenter analytics
+  [AppCenterReactNative register];  // Initialize AppCenter
   [FIRApp configure];
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
@@ -37,7 +44,7 @@
 #if DEBUG
   return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 #else
-  return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+  return [CodePush bundleURL];
 #endif
 }
 
